@@ -18,7 +18,7 @@ Visits.php -> /laravel/app/models
 
 API supports GET and POST operations.
 
-** List all cities in a state:**
+**List all cities in a state:**
 
 `GET /v1/states/{state}/cities`
 
@@ -26,7 +26,7 @@ Here {state} is 2 character state code such as TX, CA, IL, NY. A list of cities 
 
 Invalid code will result in error code 406 - Input not acceptable.
 
-** List cities within a 100 mile radius of a city: ** 
+**List cities within a 100 mile radius of a city:** 
 
 `GET /v1/states/{state}/cities/{city}?radius=100`
 
@@ -34,7 +34,7 @@ Here {city} is the city ID that can be obtained from previous step. A list of ne
 
 If no radius is entered, cities in 100 miles are returned. Invalid city ID will result in error code 406 - Input not acceptable.
 
-** Allow a user to update a row of data to indicate they have visited a particular city: **
+**Allow a user to update a row of data to indicate they have visited a particular city**
 
 `POST /v1/users/{user}/visits`
 
@@ -47,7 +47,7 @@ If no radius is entered, cities in 100 miles are returned. Invalid city ID will 
 
 This creates a new entry in visits table or update if it already exists. A visit ID is returned to user upon successful operation.
 
-** Return a list of cities the user has visited: **
+**Return a list of cities the user has visited:**
 
 `GET /v1/users/{user}/visits`
 
